@@ -9,12 +9,10 @@ Live Site URL: [Live Demo](https://kennyestrella-eat-and-travel.netlify.app/)
 ## What I learned in this project:
 
 - Advanced CSS animations with @keyframes, animation and transition
-How CSS works behind the scenes: the cascade, specificity, inheritance, etc.
-- CSS architecture: component-based design, BEM, writing reusable code, etc.
-- Flexbox layouts: build a huge real-world project with flexbox
-- CSS Grid layouts: build a huge real-world project with CSS Grid
-Using Sass in real-world projects: global variables, architecting CSS, managing media queries, etc.
-- Advanced responsive design: media queries, mobile-first vs desktop-first, em vs rem units, etc.
+How CSS works behind the scenes: the cascade, specificity and inheritance
+- CSS architecture: component-based design, BEM and writing reusable code
+- Flexbox and CSS Grid layouts
+- Advanced responsive design: media queries, mobile-first vs desktop-first and em vs rem units
 - SVG images in HTML and CSS
 - Responsive images in HTML and CSS for faster pageloads
 - The NPM ecosystem: development workflows and building processes
