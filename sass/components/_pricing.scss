@@ -1,0 +1,196 @@
+.pricing {  
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    height: 48rem;    
+    position: relative;
+    @include mediaQuery(viewport900) { height: 42rem; }
+    @include mediaQuery(viewport730) { height: 42rem; }
+    &__card {
+        height: 48rem;
+        position: absolute;
+        box-shadow: 0 1rem 2rem rgba($color-black-1, .1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: all .5s ease;
+        cursor: pointer;
+        @include mediaQuery(viewport900) { height: 42rem; }
+    }
+
+    /* Hover */
+    &:hover &__card--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__card--back {
+        transform: rotateY(0);
+    }
+    /* Hover ends */
+
+    /* Front Card */
+    &__card--front {
+        background-color: $color-white-1;
+    }
+    &__card--header {
+        height: 15.6rem;
+        position: relative;
+        @include mediaQuery(viewport900) {
+            height: 13.6rem;
+        }
+        &-image {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;                
+                height: 15.6rem;
+                @include mediaQuery(viewport900) {
+                    height: 13.6rem;
+                }
+            }
+            & img {
+                width: 100%;
+                height: 15.6rem;
+                object-fit: cover;
+                @include mediaQuery(viewport900) {
+                    height: 13.6rem;
+                }
+            }
+            &-1 {
+                &::before {                    
+                    background-image: linear-gradient(
+                        to bottom right, 
+                        rgba($color-green-1, .8), 
+                        rgba($color-green-2, .8)
+                    );            
+                }
+            }
+            &-2 {
+                &::before {                    
+                    background-image: linear-gradient(
+                        to bottom right, 
+                        rgba($color-primary-2, .8), 
+                        rgba($color-primary-3, .8)
+                    );            
+                }
+            } 
+            &-3 {
+                &::before {                    
+                    background-image: linear-gradient(
+                        to bottom right, 
+                        rgba($color-primary-1, .8), 
+                        rgba($color-primary-1a, .8)
+                    );            
+                }
+            } 
+        }
+    }
+    &__card--details {
+        margin: 2.8rem 0 2rem 0;
+        @include mediaQuery(viewport900) { margin-top: 2rem; }
+        @include mediaQuery(viewport730) { margin-top: 2.8rem; }
+        ul {
+            width: 70%;
+            margin: 0 auto;
+            list-style: none;
+            @include mediaQuery(viewport850) { width: 76%; }
+            li {
+                padding: 1rem;
+                font-size: $medium-font-size;
+                color: $color-gray-2;
+                text-transform: uppercase;
+                text-align: center;                
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-gray-1;
+                }
+                @include mediaQuery(viewport900) { 
+                    padding: .8rem; 
+                    font-size: 1.7rem;
+                }
+                @include mediaQuery(viewport850) { 
+                    padding: .76rem; 
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    /* Front Card ends */
+
+    /* Back Card */
+    &__card--back {
+        transform: rotateY(180deg);        
+        background-color: $color-white-1;        
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white-1;
+        padding-top: 8rem;
+        @include mediaQuery(viewport650) { padding-top: 3rem; }
+        @include mediaQuery(viewport600) { padding-top: 4rem; }
+        &-1 {
+            background-image: linear-gradient(
+                to bottom right, 
+                rgba($color-green-1, .8), 
+                rgba($color-green-2, .8)
+            );
+        }
+        &-2 {
+            background-image: linear-gradient(
+                to bottom right, 
+                rgba($color-primary-2, .8), 
+                rgba($color-primary-3, .8)
+            );
+        }
+        &-3 {
+            background-image: linear-gradient(
+                to bottom right, 
+                rgba($color-primary-1, .8), 
+                rgba($color-primary-1a, .8)
+            );
+        }
+        &-label-1 {
+            font-size: $big-font-size;
+            text-shadow: -1px 1px 3px rgba($color-black-1, .5);
+            color: $color-white-1;
+        }
+        &-price {
+            font-family: $font-family-2;
+            font-size: 8rem;
+            font-weight: 300;
+            text-shadow: -1px 1px 3px rgba($color-black-1, .5);
+            @include mediaQuery(viewport900) { font-size: 6rem; }
+        }
+        & .btn {
+            margin-top: 5rem;
+            @include mediaQuery(viewport900) {
+                margin-top: 3rem;
+            }
+        }
+    }
+    /* Back Card ends */
+    
+    //@include mediaQuery(viewport700) {
+    @media only screen and (max-width: 43.75em),
+    only screen and (hover: none) {
+        height: auto;
+        &__card {
+            height: auto;
+            position: relative;
+        }
+        &:hover &__card--front {
+            transform: rotateY(0);
+        }
+        /* Back Card */
+        &__card--back {
+            transform: rotateY(0);        
+            background-color: $color-white-1;        
+            padding: 2.5rem 0 3.5rem 0;            
+            & .btn {
+                margin: 0;
+            }
+        }
+        /* Back Card ends */
+    }
+}

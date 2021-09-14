@@ -1,0 +1,159 @@
+.section-introduction {
+    padding: 3rem 0 14rem 0;
+    background-color: $color-gray-3;
+    position: relative;
+    @include overflowHide;
+    @include mediaQuery(viewport930) { padding: 2.8rem 0 13rem 0; }
+    @include mediaQuery(viewport900) { padding: 2.6rem 0 12rem 0; }
+    @include mediaQuery(viewport850) { padding: 2.4rem 0 11rem 0; }
+    @include mediaQuery(viewport800) { padding: 2.2rem 0 10rem 0; }
+    @include mediaQuery(viewport730) { padding: 2rem 0 9rem 0; }
+    @include mediaQuery(viewport700) { padding: 1.8rem 0 8rem 0; }
+}
+.section-value-prop {
+    padding: 3rem 0 13rem 0;
+    position: relative;
+    background-color: $color-white-1;
+    @include mediaQuery(viewport930) { padding: 2.8rem 0 12rem 0; }
+    @include mediaQuery(viewport900) { padding: 2.6rem 0 11rem 0; }
+    @include mediaQuery(viewport850) { padding: 2.4rem 0 10rem 0; }
+    @include mediaQuery(viewport800) { padding: 2.2rem 0 9rem 0; }
+    @include mediaQuery(viewport730) { 
+        padding: 2rem 0 8rem 0; 
+        & .heading-secondary {
+            display: block;
+        }
+    }
+    @include mediaQuery(viewport700) { padding: 1.8rem 0 7rem 0; }
+}
+.section-packages {
+    position: relative;
+    padding: 13rem 0;
+    background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-white-1, 0.8), 
+            rgba($color-white-1, 0.8)
+        ), 
+        url(../images/pricing-bg-medium.jpg);
+    background-size: cover;
+    background-position: top;
+    @media only screen and (min-resolution: 192dpi) and (min-width: 43.75em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 43.75em),
+    only screen and (min-width: 112.5em) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-white-1, 0.8), 
+            rgba($color-white-1, 0.8)
+        ), 
+        url(../images/pricing-bg.jpg);
+    }
+    @include mediaQuery(viewport930) { padding: 12rem 0; }
+    @include mediaQuery(viewport900) { padding: 11rem 0; }
+    @include mediaQuery(viewport850) { padding: 10rem 0; }
+    @include mediaQuery(viewport800) { padding: 9rem 0; }
+    @include mediaQuery(viewport730) { padding: 8rem 0; }
+    @include mediaQuery(viewport700) { padding: 7rem 0; }
+    @include mediaQuery(viewport450) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-white-1, 0.8), 
+            rgba($color-white-1, 0.8)
+        ), 
+        url(../images/pricing-bg-small.jpg);
+    }
+}
+.section-destination {
+    position: relative;
+    padding: 13rem 0;
+    @include overflowHide;
+    @include mediaQuery(viewport930) { padding: 12rem 0; }
+    @include mediaQuery(viewport900) { padding: 11rem 0; }
+    @include mediaQuery(viewport850) { padding: 10rem 0; }
+    @include mediaQuery(viewport800) { padding: 9rem 0; }
+    @include mediaQuery(viewport730) { padding: 8rem 0; }
+    @include mediaQuery(viewport700) { padding: 7rem 0; }
+}
+.section-testimonials {
+    position: relative;
+    padding: 13rem 0;
+    background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-gray-1, 0.7), 
+            rgba($color-gray-1, 0.7)
+        ), 
+        url(../images/testimonials-bg-small.jpg);
+    background-size: cover;
+    background-position: top;
+    @media only screen and (min-resolution: 192dpi) and (min-width: 43.75em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 43.75em),
+    only screen and (min-width: 112.5em) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-gray-1, 0.7), 
+            rgba($color-gray-1, 0.7)
+        ), 
+        url(../images/testimonials-bg.jpg);
+    }
+    @include overflowHide;
+    @include mediaQuery(viewport930) { padding: 12rem 0; }
+    @include mediaQuery(viewport900) { padding: 11rem 0; }
+    @include mediaQuery(viewport850) { padding: 10rem 0; }
+    @include mediaQuery(viewport800) { padding: 9rem 0; }
+    @include mediaQuery(viewport730) { padding: 8rem 0; }
+    @include mediaQuery(viewport700) { padding: 7rem 0; }
+    @include mediaQuery(viewport450) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-gray-1, 0.7),
+            rgba($color-gray-1, 0.7)
+        ), 
+        url(../images/testimonials-bg-small.jpg);
+    }
+}
+.section-contact-footer {
+    position: relative;
+    background-color: $color-gray-3;
+    padding: 13rem 0;
+    @include overflowHide;    
+    @include mediaQuery(viewport1060) {
+        background-color: $color-white-1;
+        padding: 7rem 0 4rem 0;
+        & .heading-secondary {
+            display: block;
+            text-align: center;
+        }
+        & .wrapper {
+            max-width: 100%;
+            padding: 0;
+            & .row {
+                [class^="col-"] {
+                    float: none;
+                    width: 100%;
+                }
+                & .col-1-of-2:last-child {
+                    & .row:first-child {
+                        background-color: $color-gray-3;
+                    }
+                }
+            }
+        }
+        & .paragraph-1 {
+            text-align: center;
+        }
+        & .btn-left {
+            text-align: center;
+        }
+    }
+    @include mediaQuery(viewport930) { padding: 12rem 0; }
+    @include mediaQuery(viewport900) { padding: 11rem 0; }
+    @include mediaQuery(viewport850) { padding: 10rem 0; }
+    @include mediaQuery(viewport800) { padding: 9rem 0; }
+    @include mediaQuery(viewport730) { padding: 8rem 0; }
+    @include mediaQuery(viewport700) { padding: 7rem 0; }
+}

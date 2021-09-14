@@ -1,0 +1,197 @@
+/*********************************
+**** SVG DIVIDER
+*********************************/
+.divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    &__shape-fill--white-1 {
+        fill: $color-white-1;
+    }
+    &__shape-fill--gray-3 {
+        fill: $color-gray-3;
+    }
+}
+.divider-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    &__shape-fill--white-1 {
+        fill: $color-white-1;
+    }
+    &__shape-fill--gray-3 {
+        fill: $color-gray-3;
+    }
+}
+
+/*********************************
+**** SVG ICON
+*********************************/
+/* Forward Arrow */
+.forward-arrow-small {
+    width: 1.1rem;
+    fill: $color-gray-2;
+    margin-right: .5rem;
+}
+
+/*********************************
+**** WRAP ELEMENT
+*********************************/
+.wrapper {
+    position: relative;
+    max-width: $grid-width;
+    margin: 0 auto;     
+    @include mediaQuery(viewport1439) {
+        padding-left: 4rem;
+        padding-right: 4rem; 
+    }
+    @include mediaQuery(viewport1360) {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem; 
+    }
+    @include mediaQuery(viewport1300) {
+        padding-left: 3.3rem;
+        padding-right: 3.3rem;
+    }
+    @include mediaQuery(viewport1270) {
+        padding-left: 3.1rem;
+        padding-right: 3.1rem; 
+    }
+    @include mediaQuery(viewport1240) {
+        padding-left: 2.9rem;
+        padding-right: 2.9rem;
+    }
+    @include mediaQuery(viewport1200) {
+        padding-left: 2.7rem;
+        padding-right: 2.7rem; 
+    }
+    @include mediaQuery(viewport1140) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem; 
+    }
+    @include mediaQuery(viewport1060) {
+        padding-left: 4.1rem;
+        padding-right: 4.1rem;
+    }    
+    @include mediaQuery(viewport980) {
+        max-width: 100%;
+    }
+    @include mediaQuery(viewport700) {
+        max-width: 60%;
+    }  
+    @include mediaQuery(viewport650) {
+        max-width: 65%;
+    } 
+    @include mediaQuery(viewport600) {
+        max-width: 75%;
+    }
+    @include mediaQuery(viewport550) {
+        max-width: 80%;
+    }
+    @include mediaQuery(viewport500) {
+        max-width: 85%;
+    }
+    @include mediaQuery(viewport450) {
+        max-width: 90%;
+    }
+    @include mediaQuery(viewport400) {
+        max-width: 100%;
+    }  
+}
+
+/*********************************
+**** CENTER ELEMENT
+*********************************/
+.center-element {
+    position: relative;
+    &-box {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+}
+
+/*********************************
+**** PARAGRAPHS & TEXTS
+*********************************/
+.text-uppercase { text-transform: uppercase; }
+.center-text { 
+    text-align: center; 
+    display: block;
+}
+
+/*********************************
+**** MARGINS
+*********************************/
+/* Margin Bottom */
+.margin-bottom-small { 
+    margin-bottom: 4rem; 
+    @include mediaQuery(viewport900) { margin-bottom: 3.5rem }
+    @include mediaQuery(viewport730) { margin-bottom: 3rem }
+    @include mediaQuery(viewport700) { margin-bottom: 2.5rem }
+    @include mediaQuery(viewport650) { margin-bottom: 2rem }
+    @include mediaQuery(viewport600) { margin-bottom: 1.5rem }
+}
+.margin-bottom-big { 
+    margin-bottom: 6rem;
+    @include mediaQuery(viewport900) { margin-bottom: 4rem }
+    @include mediaQuery(viewport730) { margin-bottom: 3rem }
+    @include mediaQuery(viewport700) { margin-bottom: 2.5rem }
+    @include mediaQuery(viewport650) { margin-bottom: 1.5rem }
+    @include mediaQuery(viewport600) { margin-bottom: 1rem }
+}
+.margin-bottom-large { margin-bottom: 8rem; }
+.margin-bottom-x-large { margin-bottom: 10rem; }
+.margin-bottom-xx-large { margin-bottom: 12rem; }
+/* Margin Top */
+.margin-top-small { 
+    margin-top: 4rem; 
+    @include mediaQuery(viewport900) { margin-top: 3.5rem }
+    @include mediaQuery(viewport730) { margin-top: 3rem }
+    @include mediaQuery(viewport700) { margin-top: 2.5rem }
+    @include mediaQuery(viewport650) { margin-top: 2rem }
+    @include mediaQuery(viewport600) { margin-top: 1.5rem }
+}
+.margin-top-big { 
+    margin-top: 6rem; 
+    @include mediaQuery(viewport900) { margin-top: 4rem }
+    @include mediaQuery(viewport730) { margin-top: 3rem }
+    @include mediaQuery(viewport700) { margin-top: 2.5rem }
+    @include mediaQuery(viewport650) { margin-top: 1.5rem }
+    @include mediaQuery(viewport600) { margin-top: 1rem }
+}
+.margin-top-large { margin-top: 8rem; }
+.margin-top-x-large { margin-top: 10rem; }
+.margin-top-xx-large { margin-top: 12rem; }
+
+/*********************************
+**** PADDINGS
+*********************************/
+/* Padding Bottom */
+.padding-bottom-small { 
+    padding-bottom: 4rem; 
+    @include mediaQuery(viewport900) { padding-bottom: 3.5rem }
+    @include mediaQuery(viewport730) { padding-bottom: 3rem }
+    @include mediaQuery(viewport700) { padding-bottom: 2.5rem }
+    @include mediaQuery(viewport650) { padding-bottom: 2rem }
+    @include mediaQuery(viewport600) { padding-bottom: 1.5rem }
+}
+.padding-bottom-big { padding-bottom: 6rem; }
+.padding-bottom-large { padding-bottom: 8rem; }
+.padding-bottom-x-large { padding-bottom: 10rem; }
+.padding-bottom-xx-large { padding-bottom: 12rem; }
+/* Padding Top */
+.padding-top-small { padding-top: 4rem; }
+.padding-top-big { padding-top: 6rem; }
+.padding-top-large { padding-top: 8rem; }
+.padding-top-x-large { padding-top: 10rem; }
+.padding-top-xx-large { padding-top: 12rem; }
+

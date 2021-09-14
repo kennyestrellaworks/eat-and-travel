@@ -1,0 +1,24 @@
+.value-prop {
+    &__box {
+        position: relative;
+        box-shadow: 0 1rem 2rem rgba($color-black-1, .1);
+        transition: all .2s;
+        &-header {
+            width: 100%;
+            height: 30rem;
+            position: relative;            
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }           
+        }
+        .paragraph-1 {
+            padding: 4rem;
+        }
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 1rem 2rem rgba($color-black-1, .15);
+        }
+    }    
+}

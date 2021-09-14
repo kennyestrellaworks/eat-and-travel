@@ -1,0 +1,63 @@
+.btn {
+    width: 100%;
+    &-left {
+        text-align: left;
+        @include mediaQuery(viewport730) {
+            text-align: center;
+        }
+    }
+    &-right {
+        text-align: right;
+        @include mediaQuery(viewport730) {
+            text-align: center;
+        }
+    }
+    &-center {
+        text-align: center;
+    }
+    &__primary {
+        background-color: $color-primary-1;
+        padding: 1.5rem 3.5rem;
+        font-size: $default-font-size;
+        @include mediaQuery(viewport500) {
+            font-size: 1.5rem;
+        }
+        @include mediaQuery(viewport450) {
+            font-size: 1.3rem;
+        }
+        &--small {
+            background-color: $color-primary-1;
+            padding: 1rem 2.5rem;
+            font-size: $small-font-size;
+        }
+    }
+    &__link {
+        &--animated {
+            animation: moveInDown .5s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+    }
+    &__link,
+    &__link:link,
+    &__link:visited {
+        backface-visibility: hidden;
+        text-decoration: none;        
+        text-transform: uppercase;
+        color: $color-white-1;        
+        border-radius: 50rem;
+        letter-spacing: .13rem;
+        display: inline-block;
+        transition: all .5s;
+        /* For <button> element */
+        border: none;
+        cursor: pointer;
+    }
+    &__link:hover {
+        transform: scale(1.03);
+        box-shadow: 0 1rem 1rem rgba($color-black-1, .1);  
+    }
+    &__link:active {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}

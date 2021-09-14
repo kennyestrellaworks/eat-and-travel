@@ -1,0 +1,62 @@
+.form {
+    &__group {  
+        color: $color-gray-2;      
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }        
+    }    
+    &__input {
+        color: $color-gray-2; 
+        font-size: $default-font-size;
+        font-family: inherit;
+        padding: 2rem;
+        display: block;
+        width: 100%;
+        border-color: $color-gray-1;
+        border-top: 2px solid $color-gray-1;
+        border-left: 2px solid $color-gray-1;
+        border-right: 2px solid $color-gray-1;
+        border-bottom: 3px solid $color-gray-1;
+        transition: all .3s;
+        @include mediaQuery(viewport1060) {
+            background-color: $color-gray-3;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black-1, .2);
+            border-bottom: 3px solid $color-green-3;
+            border-left: 2px solid $color-gray-1;
+            border-right: 2px solid $color-gray-1;
+            &:invalid {
+                border-bottom: 3px solid $color-red-1;
+            }
+        }
+        &::placeholder {
+            text-transform: uppercase;
+            color: $color-gray-2; 
+        }
+        
+    }
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+    &__label {
+        font-size: $smaller-font-size;
+        text-transform: uppercase;
+        padding-left: 2rem;
+        transition: all .3s;
+    }
+    &__textarea {
+        font-size: $default-font-size;
+        font-family: inherit;
+        resize: none;
+        height: 20rem;
+    }
+    &__submit {
+        &:focus {
+            outline: none;
+        }        
+    }
+}

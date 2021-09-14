@@ -1,0 +1,111 @@
+.destination {
+    height: 44rem;
+    position: relative;
+    box-shadow: 0 1rem 2rem rgba($color-black-1, .1);
+    backface-visibility: hidden;
+    transition: all .8s ease;
+    overflow: hidden;
+    @include mediaQuery(viewport980) { height: 46rem; }
+    @include mediaQuery(viewport850) { height: 48rem; }
+    &__box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 44rem;
+        @include mediaQuery(viewport980) { height: 46rem; }
+        @include mediaQuery(viewport850) { height: 48rem; }
+        &-image {
+            height: 44rem;
+            @include mediaQuery(viewport980) { height: 46rem; }
+            @include mediaQuery(viewport850) { height: 48rem; }
+            &-feature {
+                object-fit: cover;
+                width: 100%;
+                height: 44rem;
+                @include mediaQuery(viewport980) { height: 46rem; }
+                @include mediaQuery(viewport850) { height: 48rem; }
+            }         
+        }
+        &-place-name {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            &--text {
+                text-align: center;
+                padding: 1rem 0;
+                font-size: 3rem;
+                color: $color-white-1;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                transition: all .8s ease;
+                background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-primary-3, .8),
+                    rgba($color-primary-2, .8)
+                );
+                @include mediaQuery(viewport800) {
+                    text-align: left;
+                    padding-left: 2rem;
+                    font-size: 2rem;
+                }
+            }
+        }       
+        &-overlay {
+            position: absolute;
+            top: 44rem;
+            left: 0;
+            opacity: 0;
+            font-size: $small-font-size;
+            height: 44rem;
+            color: $color-white-1;
+            background-color: rgba($color-primary-3, .9);
+            padding: 3rem 3.5rem;
+            overflow: hidden;
+            backface-visibility: hidden;
+            transition: all .8s ease;
+            @include mediaQuery(viewport980) { 
+                height: 46rem; 
+                top: 46rem;
+            }
+            @include mediaQuery(viewport850) { 
+                height: 48rem;
+                top: 48rem;
+            }
+            &-button {
+                margin-top: 2rem;
+            }
+            &-items {
+                float: left;
+                width: 100%;
+                &:not(:last-child) {
+                    padding-bottom: .7rem;
+                }
+            }
+            &-list {
+                margin-top: 2rem;
+                @include clearfix;
+            }            
+            &--icon {
+                float: left;
+                margin-right: 1rem;
+            }
+            &--paragraph {
+                line-height: 1.3;
+            }
+        }        
+    }
+    &:hover &__box-overlay {
+        top: 0;
+        opacity: 1;
+        overflow: hidden;
+    }
+    &:hover &__box-place-name {
+        opacity: 0;
+        overflow: hidden;
+    }
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba($color-black-1, .5);
+        transform: scale(1.03);
+    }
+}

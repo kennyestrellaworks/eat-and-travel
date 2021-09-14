@@ -1,0 +1,30 @@
+{
+  "name": "eat-and-travel-dev",
+  "version": "1.0.0",
+  "description": "A travelling with food preparation website.",
+  "browserslist": "last 10 versions",
+  "main": "index.js",
+  "scripts": {
+    "watchSass": "node-sass sass/main.scss css/style.css -w",
+    "liveServer": "live-server",
+    "compileSass": "node-sass sass/main.scss css/style.css",
+    "concatCSS": "concat css/linea.css css/style.css -o css/style.concat.css",
+    "prefixCSS": "postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
+    "compressCSS": "node-sass css/style.prefix.css _dist/css/style.css --output-style compressed",        
+    "minifyHTML": "html-minifier --output _dist/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html",
+    "startDev": "npm-run-all --parallel watchSass liveServer",
+    "buildDist": "npm-run-all compileSass concatCSS prefixCSS compressCSS minifyHTML"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1"
+  }
+}

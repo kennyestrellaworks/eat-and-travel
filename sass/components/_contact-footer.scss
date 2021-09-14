@@ -1,0 +1,201 @@
+.contact-box {
+    @include mediaQuery(viewport1060) {
+        margin: 0 auto;
+        max-width: 70%;
+        padding-bottom: 7rem;
+    }
+    &__btn {
+        margin-top: 3rem;
+    }    
+}
+.sitemap-box-and-contact-details-boxing {
+    @include mediaQuery(viewport1060) {
+        width: 85%;
+        margin: 0 auto;
+    }
+    @include mediaQuery(viewport600) {
+        width: 100%;
+        margin: 0;
+    }
+}
+.sitemap-box {
+    @include mediaQuery(viewport1060) {
+        float: left;
+        padding: 7rem 0 5rem 0;
+        //background-color: $color-gray-3;
+        width: 50%;
+    }    
+    @include mediaQuery(viewport600) { width: 100%; }
+    &__nav {
+        text-transform: uppercase;
+        &-list {
+            list-style: none;
+            @include mediaQuery(viewport1060) {
+                text-align: center;
+            }
+        }
+        &-item {
+            font-size: $default-font-size;
+            display: block;            
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+        &-link {
+            transition: all .3s;
+            backface-visibility: hidden;
+            @include mediaQuery(viewport1060) {
+                & svg {
+                    display: none;
+                }
+            }
+            &,
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $color-gray-2;
+            }
+            &:hover,
+            &:active {
+                color: $color-white-1;
+                background-color: $color-primary-1;            
+                padding: .8rem 1rem;
+                box-shadow: 0 1rem 1rem rgba($color-black-1,.1);            
+            }
+            &:hover svg {
+                fill: $color-white-1;
+            }
+        }
+    }    
+}
+.subscribe-box {   
+    border-top: 2px solid $color-gray-1; 
+    padding-top: 3rem;    
+    @include mediaQuery(viewport1060) {
+        margin: 0 auto;
+        max-width: 70rem;
+        background-color: $color-white-1;
+        border: none;      
+    }
+    @include mediaQuery(viewport730) { padding-top: 4rem; }
+    @include mediaQuery(viewport700) { max-width: 70%; }
+    @include mediaQuery(viewport650) { max-width: 85%; }   
+    @include mediaQuery(viewport600) { max-width: 60%; }   
+    &__form {
+        @include clearfix;
+    }
+    
+    &__heading {
+        padding-top: -5rem;
+    }
+    &__paragraph {
+        text-transform: uppercase;
+        font-size: $big-font-size;
+    }
+    &__row {
+        [class^="subscribe-box__"] {
+            float: left;
+        }           
+    }
+    &__column-left {
+        width: 60%;
+        @include mediaQuery(viewport1060) { width: 70%; }
+        @include mediaQuery(viewport700) { width: 65%; }
+        @include mediaQuery(viewport650) { 
+            width: 70%;
+            padding-right: 2rem;
+        }
+        @include mediaQuery(viewport600) { width: 100%; }
+    }
+    &__column-right {
+        width: 40%;
+        @include mediaQuery(viewport1060) { width: 30%; }
+        @include mediaQuery(viewport700) { width: 35%; } 
+        @include mediaQuery(viewport650) { width: 30%; } 
+        @include mediaQuery(viewport600) { width: 100%; }
+    }
+    &__input-box {
+        width: 100%;
+    }
+    &__btn {
+        float: right;
+        margin-top: .6rem;
+        @include mediaQuery(viewport600) { float: none; }
+    }
+}
+.contact-details {
+    @include mediaQuery(viewport1060) {        
+        padding: 7rem 0 5rem 0;
+        //background-color: $color-gray-3;
+        //border-bottom: 2px solid $color-gray-1;
+    }
+    @include mediaQuery(viewport600) {
+        float: left;
+        width: 100%;
+        border-top: 2px solid $color-gray-1;
+    }
+    &__logo {
+        float: right;
+        @include mediaQuery(viewport1060) {
+            float: none;
+            text-align: center;            
+        }
+    }
+    &__social {
+        float: right;
+        margin-top: 1rem;
+        @include mediaQuery(viewport1060) {
+            float: none;
+        }
+    }
+    &__social-list {
+        text-align: right;
+        @include mediaQuery(viewport1060) {
+            text-align: center;
+        }
+    }
+    &__content { 
+        float: right;       
+        text-align: right;
+        color: $color-gray-2;
+        font-size: $big-font-size;
+        @include mediaQuery(viewport1060) {
+            float: none;
+            text-align: center;
+        }
+    } 
+    &__social {
+        &-items {
+            list-style: none;
+            display: inline;
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+        &-link {
+            text-decoration: none;
+        }
+        &-icons {
+            fill: $color-gray-2;
+            width: 5rem;
+            transition: all .3s;
+            width: 4.5rem;
+            &--facebook:hover {
+                fill: #1877F2;
+            }
+            &--twitter:hover {
+                fill: #55ACEE;
+            }
+            &--linkedin:hover {
+                fill: #0077B5;
+            }
+            &--youtube:hover {
+                fill: #FF0000;
+            }
+            &:hover {
+                transform: scale(1.03);
+                cursor: pointer;              
+            }             
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.carousel {
+    &__btn-arrow {
+        fill: $color-gray-1;
+        position: absolute;
+        top: 50%;
+        z-index: 1050;
+        width: 100%;  
+        &-svg {
+            display: inline-block;
+            background-color: $color-white-1;
+            box-shadow: 0 .5rem 2rem rgba($color-black-1, .2);
+            padding: 2rem 1.8rem 2rem 1.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .2s;
+            & svg {
+                width: 3rem;
+                @include mediaQuery(viewport500) { width: 2.5rem; }
+                @include mediaQuery(viewport400) { width: 2rem; }
+                @include mediaQuery(viewport300) { width: 1.5rem; }
+            }
+            &-left {
+                position: inherit;
+                left: -6rem;
+                transition: all .3s;
+                &:hover {
+                    fill: $color-gray-2;
+                }
+            }
+            &-right {
+                position: inherit;
+                right: 0;
+                transition: all .3s;
+                &:hover {
+                    fill: $color-gray-2;
+                }
+            }
+            &:hover {
+                box-shadow: 0 .5rem 2rem rgba($color-black-1, .5);
+                transform: scale(1.03);            
+            }
+        }
+        &--left-svg {
+            transform: rotate(90deg);
+        }
+        &--right-svg {
+            transform: rotate(-90deg);
+        } 
+    }
+}

@@ -1,0 +1,167 @@
+.hamburger-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1400;
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ &__menu {
+    opacity: 1;
+    width: 100%;
+  }
+  &__checkbox:checked ~ &__menu &__menu-list {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &__checkbox:checked + &__icon &__icon-bars {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__icon &__icon-bars::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__icon &__icon-bars::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &__icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 10rem;
+    width: 11rem;
+    border-radius: 0 0 0 80%;
+    z-index: 1550;
+    text-align: right;
+    padding-right: 3rem;
+    background-color: $color-white-1;
+    box-shadow: 0 0.5rem 2rem rgba($color-black-1, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+    @include mediaQuery(viewport350) {
+      height: 8rem;
+      width: 9rem;
+      padding-right: 2rem;
+    }
+    &-bars {
+      position: relative;
+      margin-top: 4rem;
+      @include mediaQuery(viewport350) {
+        margin-top: 3.2rem;
+      }
+      &,
+      &::before,
+      &::after {
+        width: 3.5rem;
+        height: 4px;
+        background-color: $color-primary-3;
+        display: inline-block;
+        @include mediaQuery(viewport350) {
+          width: 3rem;
+          height: 2.3px;
+        }
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+      }
+      &::before {
+        top: -1.2rem;
+      }
+      &::after {
+        top: 1.2rem;
+      }
+    }
+  }
+  &__icon:hover &__icon-bars::before {
+    top: -1.4rem;
+    @include mediaQuery(viewport350) {
+      top: -1rem;
+    }
+  }
+  &__icon:hover &__icon-bars::after {
+    top: 1.4rem;
+    @include mediaQuery(viewport350) {
+      top: 1rem;
+    }
+  }
+  &__background {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1300;
+    background-image: radial-gradient($color-primary-3, $color-primary-2);
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+  }
+  &__menu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    z-index: 1500;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    &-list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      list-style: none;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s;
+      width: 100%;
+    }
+    &-item {
+      padding: 1rem;
+      @include mediaQuery(viewport350) {
+        padding: 1.3rem;
+      }
+    }
+    &-link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white-1;
+        padding: 1.5rem 5rem;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          $color-primary-1 50%
+        );
+        background-size: 230%;
+        transition: all 0.5s;
+        @include mediaQuery(viewport1200) {
+          font-size: 2.6rem;
+        }
+        @include mediaQuery(viewport350) {
+          font-size: 2rem;
+        }
+      }
+      &:hover,
+      &:active {
+        background-position: 100%;
+        border: 2px solid $color-primary-1;
+      }
+    }
+  }
+}

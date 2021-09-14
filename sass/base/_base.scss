@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    /*  This defines 62.5% of the default font-size set on the browser.
+    *   In most cases, the default font-size for browsers is 16px.
+    *   However, to make it easier for us to control the size computation
+    *   for margin & paddings, we will use rem unit, which is 1rem equals
+    *   to 10px. Using this unit, we are basing our sizes on our root font-size
+    *   which we set on the html tag. Thus, we will consider 10px is starting 
+    *   size so that if we have a padding of 50px, it's easy to set it to 5rem.
+    */
+    font-size: 62.5%; /* 10/16 = 0.625*100 = 62.5 */
+    @include mediaQuery(viewport1799) {
+        font-size: 68.75%; /* 11/16 = 0.6875*100 = 68.75% */
+    }
+    @include mediaQuery(viewPort1439) {
+        font-size: 67.5%; /* 10.8/16 = 0.675*100 = 67.5% */
+    }
+    @include mediaQuery(viewport1360) {
+        font-size: 66.25%; /* 10.6/16 = 0.6625*100 = 66.25% */
+    }
+    @include mediaQuery(viewPort1300) {
+        font-size: 65%; /* 10.4/4 = 0.65*100 = 65% */
+    }
+    @include mediaQuery(viewport1270) {
+        font-size: 63.75%; /* 10.2/16 = 0.6375*100 = 63.75% */
+    }
+    @include mediaQuery(viewport1240) {
+        font-size: 62.5%; /* 10/16 = 0.625*100 = 62.5% */
+    }
+    @include mediaQuery(viewport1200) {
+        font-size: 61.25%; /* 9.8/16 = 0.6125*100 = 61.25% */
+    }
+    @include mediaQuery(viewport1140) {
+        font-size: 60%; /* 9.6/16 = 0.6*100 = 60% */
+    }
+    @include mediaQuery(viewport1060) {
+        font-size: 56.25%; /* 9/16 = 0.5625*100 = 56.25% */
+    }    
+    @include mediaQuery(viewport900) {
+        font-size: 55%; /* 8.8/16 0.55*100 = 55% */
+    }
+    @include mediaQuery(viewport730) {
+        font-size: 53.75%; /* 8.6/16 = 0.5375*100 = 53.75% */
+    }
+    @include mediaQuery(viewport600) {
+        font-size: 52.5% ; /* 8.4/16 = 0.525*100 = 52.5% */        
+    }
+    
+    @include mediaQuery(viewport1800) {
+        font-size: 75%; /* 12/16 = 0.75*100 = 75% */
+    }
+}
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100vw;
+}
+::selection {
+    background-color: $color-primary-3;
+    color: $color-white-1;
+}

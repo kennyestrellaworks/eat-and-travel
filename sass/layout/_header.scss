@@ -1,0 +1,50 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include overflowHide;
+    background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-primary-3, 0.8), 
+            rgba($color-primary-2, 0.8)
+        ), 
+        url(../images/hero-bg-medium.jpg);
+    background-size: cover;
+    background-position: top;
+    @media only screen and (min-resolution: 192dpi) and (min-width: 43.75em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 43.75em),
+    only screen and (min-width: 112.5em) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-primary-3, 0.8), 
+            rgba($color-primary-2, 0.8)
+        ), 
+        url(../images/hero-bg.jpg);
+    }
+    @include mediaQuery(viewport450) {
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-primary-3, 0.8), 
+            rgba($color-primary-2, 0.8)
+        ), 
+        url(../images/hero-bg-small.jpg);
+    }
+    &__logo-box{
+        padding: 4rem 0 0 4rem;
+    }
+    &__logo {
+        height: 8rem;
+    }
+    &__heading {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+        text-align: center;
+        width: 90rem;
+        @include mediaQuery(viewport800) { width: 60%; }
+    }
+}

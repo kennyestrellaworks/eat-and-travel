@@ -1,0 +1,152 @@
+body {
+    font-family: $font-family-3;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.heading-primary {
+    color: $color-white-1;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    &--main {
+        font-family: $font-family-2;
+        display: block;
+        font-size: 7.2rem;
+        font-weight: 700;  
+        line-height: 6rem; 
+        animation: moveInDown 1s ease-out;       
+        @include mediaQuery(viewport900) { font-size: 7rem; }
+        @include mediaQuery(viewport730) { font-size: 6.8rem; }
+        @include mediaQuery(viewport700) { font-size: 6.6rem; }
+        @include mediaQuery(viewport650) { font-size: 6.4rem; }
+        @include mediaQuery(viewport600) { font-size: 6.2rem; }
+        @include mediaQuery(viewport550) { font-size: 6rem; }
+        @include mediaQuery(viewport500) { font-size: 5.8rem; }
+        @include mediaQuery(viewport450) { font-size: 5.6rem; }
+        @include mediaQuery(viewport400) { font-size: 5.4rem; }
+        @include mediaQuery(viewport370) { font-size: 5.2rem; }
+        @include mediaQuery(viewport320) { font-size: 5rem; }
+    }
+    &--sub {
+        display: block;
+        margin-right: -2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 2.8rem;
+        animation: moveInUp 1s ease-out;
+        
+        @include mediaQuery(viewport900) { font-size: 2.9rem; }
+        @include mediaQuery(viewport730) { 
+            font-size: 2.8rem; 
+            line-height: 3.5rem;
+            margin-top: 2rem;
+            letter-spacing: 1.8rem;
+        }
+        @include mediaQuery(viewport700) { font-size: 2.7rem; }
+        @include mediaQuery(viewport650) { font-size: 2.6rem; }
+        @include mediaQuery(viewport600) { font-size: 2.5rem; }
+        @include mediaQuery(viewport550) { font-size: 2.4rem; }
+        @include mediaQuery(viewport500) { font-size: 2.3rem; }
+        @include mediaQuery(viewport450) { font-size: 2.2rem; }
+        @include mediaQuery(viewport400) { font-size: 2.1rem; }
+        @include mediaQuery(viewport370) { font-size: 2rem; }
+        @include mediaQuery(viewport320) { font-size: 1.9rem; }
+    }
+}
+.heading-secondary {   
+    padding: 0;
+    font-family: $font-family-2;
+    font-size: 4rem;
+    display: inline-block;
+    background-image: 
+        linear-gradient(
+            to left, 
+            $color-primary-2, 
+            $color-primary-3
+        );
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;    
+    @include mediaQuery(viewport900) { font-size: 3.8rem; }
+    @include mediaQuery(viewport730) { 
+        text-align: center; 
+        font-size: 3.6rem;
+    }
+    @include mediaQuery(viewport700) { font-size: 3.4rem; }
+    @include mediaQuery(viewport650) { font-size: 3.1rem; }
+    @include mediaQuery(viewport600) { font-size: 2.8rem; }
+}
+.heading-tertiary {
+    font-size: 3rem;
+    color: $color-white-1;
+    text-transform: uppercase;
+    width: 50%;
+    letter-spacing: .2rem;
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    @include mediaQuery(viewport900) { font-size: 2.8rem; }
+    @include mediaQuery(viewport730) { font-size: 2.6rem; }
+    @include mediaQuery(viewport700) { font-size: 2.4rem; }
+    @include mediaQuery(viewport650) { font-size: 2.2rem; }
+    @include mediaQuery(viewport600) { font-size: 2rem; }
+    &-span {
+        padding: 1.2rem 1.2rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-3, .8),
+            rgba($color-primary-2, .8)
+        );
+    }
+}
+.heading-quaternary {
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white-1;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--main {
+        font-size: 2.9rem;
+        line-height: 3rem;
+        text-shadow: -1px 1px 3px rgba($color-black-1, .5);
+        @include mediaQuery(viewport900) { font-size: 2.7rem; }
+        @include mediaQuery(viewport730) { font-size: 2.5rem; }
+        @include mediaQuery(viewport700) { font-size: 2.3rem; }
+    }
+    &--sub {
+        font-size: 1.8rem;                    
+        text-shadow: -1px 1px 3px rgba($color-black-1, .5);
+        @include mediaQuery(viewport900) { font-size: 1.6rem; }
+        @include mediaQuery(viewport730) { font-size: 1.5rem; }
+        @include mediaQuery(viewport700) { font-size: 1.4rem; }
+    }
+}
+.card-heading-primary {
+    color: $color-white-1;
+    border-bottom: 1px solid $color-white-1;
+    &--main {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+    &--sub {
+        padding-bottom: 2rem;
+        font-size: 1.7rem;
+    }
+}
+.paragraph-1 {
+    font-size: $default-font-size;
+    line-height: 1.5;
+    color: $color-gray-2;
+    @include mediaQuery(viewport730) {
+        text-align: center;
+    }
+    &:not(:last-child) {
+        padding-bottom: 2rem;
+    }
+}
+.bold-text {
+    color: $color-primary-3;
+}

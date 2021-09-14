@@ -1,0 +1,233 @@
+.popup {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black-1, 0.8);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    @include mediaQuery(viewport700) {
+        overflow-y: scroll;
+        max-height: 100%;
+    }
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target &__box-container {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    &__box {        
+        position: relative;
+        height: 100vh;
+    }
+    &__box-container {
+        background-color: $color-white-1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 114rem;
+        padding: 3rem;        
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all .5s .3s;        
+        @include mediaQuery(viewport1200) { width: 90%; }
+        @include mediaQuery(viewport700) { 
+            width: 80%; 
+            padding-top: 7rem;
+        }
+        & .row {
+            @include mediaQuery(viewport700) { 
+                width: 80%;
+                margin: auto;
+            }
+            @include mediaQuery(viewport450) { width: 100%; }
+        }
+        & .heading-box {
+            @include mediaQuery(viewport700) { 
+                width: 70%;
+                margin: auto;
+            }
+        }
+    }
+    &__box-content {
+        margin-top: 1rem;
+    }
+    &__close {
+        position: absolute;
+        right: 1rem;
+        top: 2.5rem;   
+        transition: all .3s;     
+        &-btn {
+            text-decoration: none;
+            font-size: $biggest-font-size;
+            text-decoration: none;            
+            background: $color-white-1;
+            padding: 0 1.3rem .6rem 1.3rem;
+            line-height: 0;
+            border-radius: 50%;
+            box-shadow: 0 .5rem 2rem rgba($color-black-1, .2);
+            transition: all .3s;
+            color: $color-gray-1;
+            &:hover {            
+                box-shadow: 0 .5rem 2rem rgba($color-black-1, .3); 
+                color: $color-gray-2;
+            }     
+        }
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+// Destination popup
+.destination-popup {    
+    &__box {
+        @include mediaQuery(viewport700) { height: 185vh; }
+        @include mediaQuery(viewport600) { height: 180vh; }
+        @include mediaQuery(viewport350) { height: 152vh; }
+        @include mediaQuery(viewport310) { height: 183vh; }
+        & .heading-box {
+            @include mediaQuery(viewport400) { width: 100%; }            
+        }
+    }    
+    &__button {
+        position: relative;
+        text-align: center;
+    }
+    &__boxes {
+        padding: 2rem;
+        @include mediaQuery(viewport700) { margin-top: 2rem; }     
+        @include mediaQuery(viewport400) { margin-top: 0; }     
+        @include mediaQuery(viewport350) { 
+            margin-top: 0;
+            padding: 1.5rem;
+        } 
+    }
+    &__box-overlay {
+        @include mediaQuery(viewport350) { 
+            height: 44rem;
+            padding: .5rem 1.5rem; 
+        }
+        @include mediaQuery(viewport310) { height: 48rem; }
+        & .card-heading-primary--main,
+        & .card-heading-primary--sub {
+            @include mediaQuery(viewport350) { line-height: 1.3; }
+        }
+        & .card-heading-primary--sub {
+            @include mediaQuery(viewport350) { padding-bottom: 1rem; }
+        }
+    }
+    &-destination {
+        @include mediaQuery(viewport350) { height: 44rem; }
+        @include mediaQuery(viewport310) { height: 48rem; }
+        &__box {
+            @include mediaQuery(viewport350) { height: 44rem; }
+            @include mediaQuery(viewport310) { height: 48rem; }
+            &-image {
+                @include mediaQuery(viewport350) { height: 44rem; }
+                @include mediaQuery(viewport310) { height: 48rem; }
+            }
+        }
+    }
+    &__overlay-list {
+        @include mediaQuery(viewport350) { margin-top: 1rem; }   
+    }
+}
+
+// Package popup
+.package-popup {
+    &__box {
+        @include mediaQuery(viewport700) { height: 182vh; }
+        @include mediaQuery(viewport600) { height: 177vh; }
+        @include mediaQuery(viewport350) { height: 176vh; }
+        @include mediaQuery(viewport310) { height: 180vh; }
+    }    
+    &-button {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    &__container {
+        margin-top: 2rem;
+    }
+    &__boxes {
+        box-shadow: 0 .5rem 2rem rgba($color-black-1, .2);
+        transition: all .3s;
+        cursor: pointer;
+        @include mediaQuery(viewport700) { margin-top: 2rem; }
+        &:hover {
+            box-shadow: 0 .5rem 2rem rgba($color-black-1, .3);
+            transform: scale(1.03);
+        }
+    }
+    &__package-box {
+        &-header {
+            padding: 3rem 0 3rem 0;
+            color: $color-white-1;
+            text-transform: uppercase;
+            text-align: center;
+            &--1 {
+                background-image: 
+                linear-gradient(
+                    to right bottom,
+                    rgba($color-green-1, 1),
+                    rgba($color-green-2, 1)
+                );
+            }
+            &--2 {
+                background-image: 
+                linear-gradient(
+                    to right bottom,
+                    rgba($color-primary-3, 1),
+                    rgba($color-primary-2, 1)
+                );
+            }
+            &--3 {
+                background-image: 
+                linear-gradient(
+                    to right bottom,
+                    rgba($color-primary-1, 1),
+                    rgba($color-primary-1a, 1)
+                );
+            }
+            &--primary {
+                font-size: $medium-font-size;
+                font-weight: 400;
+                letter-spacing: 2px;
+                line-height: 1;
+            }
+            &--secondary {
+                margin-top: .5rem;
+                font-size: $biggest-font-size;
+                letter-spacing: 1px;
+                line-height: 1;
+            }
+        }
+        &-details {
+            margin: 2rem 0 2rem 0;            
+            &-list {
+                list-style: none;
+                text-align: center;
+                color: $color-gray-2;
+                font-size: $medium-font-size;
+                width: 70%;
+                margin: 0 auto;
+            }
+            &-items {
+                padding: 1rem 0 1rem 0;
+            }
+            &-items:not(:last-child) {
+                border-bottom: 1px solid $color-gray-1;
+            }
+        }
+    }
+    &__box-button {
+        margin-top: 3rem;
+    }
+}

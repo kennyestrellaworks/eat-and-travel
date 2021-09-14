@@ -1,0 +1,48 @@
+.testimonial {
+    padding: 5rem;
+    background-color: rgba($color-gray-3, .7);
+    float: left;
+    @include clearfix;
+    box-shadow: -.3rem 1rem 3rem rgba($color-black-1, .1);
+    &__header-btn {
+        margin-top: 3rem;
+    }
+    &__item {
+        transition: all .2s;
+        backface-visibility: hidden;
+        @include mediaQuery(viewport730) {
+            &:first-child {
+                padding-top: 3rem;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;            
+        }
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 1rem 2rem rgba($color-black-1, .15);
+        }
+        &-box {
+            background-color: $color-white-1;
+            padding: 2rem;            
+            &-img {
+                width: 8rem;
+                border-radius: 50%;
+            }                     
+        }
+        &-img-holder {
+            float: left;            
+            margin-right: 2rem;
+        }
+        &-person-name {
+            text-transform: uppercase;
+            text-align: right;
+            font-weight: bold;
+            color: $color-primary-3;
+            font-size: $default-font-size;
+        }
+        &-paragraph .paragraph-1 {
+            text-align: right;
+        }
+    }    
+}
