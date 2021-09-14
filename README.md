@@ -4,7 +4,7 @@ This is a project I did last year after I finished a course in Udemy, **Advanced
 
 ![](project-preview.jpg)
 
-Live Site URL: [Live Demo](http://jklmthreads.com/coding-projects/eat-and-travel/)
+Live Site URL: [Live Demo](https://kennyestrella-eat-and-travel.netlify.app/)
 
 ## What I learned in this project:
 
