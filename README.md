@@ -6,7 +6,7 @@ This is a project I did last year after I finished a course in Udemy, **Advanced
 
 Live Site URL: [Live Demo](http://jklmthreads.com/coding-projects/eat-and-travel/)
 
-## What I applied in this project:
+## What I learned in this project:
 
 - Advanced CSS animations with @keyframes, animation and transition
 How CSS works behind the scenes: the cascade, specificity, inheritance, etc.
